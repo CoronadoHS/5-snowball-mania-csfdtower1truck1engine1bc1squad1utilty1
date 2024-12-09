@@ -59,9 +59,11 @@ def gameplay(name, players, manual):
                     while (target == thrower):
                         target = random.choice (players)
         print ( thrower + " is throwing a snow ball at " + target + "!")
-        print (" -- ")
-        print("-  -")
-        print(" -- ")
+        
+        print(" -‾‾- ")
+        print("|    |")
+        print (" -__- ")
+        
         
         hitnum = random.randrange(6)
 
@@ -73,9 +75,23 @@ def gameplay(name, players, manual):
             
             if ( target not in players):
                  print ( " you hit a passer by you are now out!!")
+                 print("                -‾‾-   |")
+                 print("               |    |  |")
+                 print ("                -__-   | ")
+                 print("                 -‾‾ |")
+                 print("                |    |")
+                 print("                 -__ |j")
                  players.remove(thrower)
-            print("it is a hit ! " + target + " is down")
-            players.remove(target)
+            else:     
+                    print("it is a hit ! " + target + " is down")
+                    print("                -‾‾-       | ")
+                    print("               |    |      |")
+                    print ("                -__-       |")
+                    time.sleep(.5)
+                    print("                 -‾| ")
+                    print("                |  |")
+                    print("                 -_|")
+                    players.remove(target)
         else:
             print("sadly, " + thrower + " has bad aim and missed!")
       print (players[0] + " is the best snowballer is in all the land!!!!!!")
